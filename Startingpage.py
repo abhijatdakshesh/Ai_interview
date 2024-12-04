@@ -1,17 +1,24 @@
+import sqlite3
 import streamlit as st
 
-st.title("Welcome to the AI-powered Interview Assistant by AIqwip")
+# Initialize session state variables
+if "name" not in st.session_state:
+    st.session_state.name = ""
+if "email" not in st.session_state:
+    st.session_state.email = ""
+if "password" not in st.session_state:
+    st.session_state.password = ""
+if "resume" not in st.session_state:
+    st.session_state.resume = None
+if "step" not in st.session_state:
+    st.session_state.step = 0
+
+# Title
+st.title("Wep")
 st.write("This will help you submit your resume and prepare for your interview.")
 
-if st.button("Start"):
-    st.write("Please enter your Name:")
-    name = st.text_input("Name:")
-    st.write("Please enter your Email:")
-    name = st.text_input("Email:")
-    st.write("Please enter your Password:")
-    name = st.text_input("Password:")
-    st.button("Login")
-else:
-    st.write("Please click the button to start the interview.")
-
-
+with st.form(key='my_form'):
+	text_input = st.text_input(label='Enter your name')
+    
+     
+	submit_button = st.form_submit_button(label='Submit')
