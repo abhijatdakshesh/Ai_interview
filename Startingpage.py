@@ -14,7 +14,7 @@ if "step" not in st.session_state:
     st.session_state.step = 0
 
 # Title
-st.title("Wep")
+st.title("Welcome to AIqwip AI-powered Interview Assistant")
 st.write("This will help you submit your resume and prepare for your interview.")
 
 with st.form(key='my_form'):
