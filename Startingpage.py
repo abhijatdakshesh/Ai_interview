@@ -20,4 +20,5 @@ st.write("This will help you submit your resume and prepare for your interview."
 with st.form(key='my_form'):
 	text_input = st.text_input(label='Enter your name')
 	text_email = st.text_input(label='Enter your Email')
-	submit_button = st.form_submit_button(label='Submit')
+	text_password = st.text_input(label='Enter your Password')
+	submit_button = st.form_submit_button(label='Login')
